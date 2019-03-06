@@ -1,10 +1,4 @@
-/**
- * @version $Id$
- * Create date: Sep 2, 2014
- * Create by: daniellee
- * Copyright (c) 2013 UniqueSoft.
- * All rights reserved.
- */
+
 package com.farkas.utils;
 
 import java.lang.reflect.Field;

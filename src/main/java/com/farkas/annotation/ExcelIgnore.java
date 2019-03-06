@@ -1,10 +1,4 @@
-/**
- * @version $Id$
- * Create date: Aug 18, 2014
- * Create by: daniellee
- * Copyright (c) 2013 UniqueSoft.
- * All rights reserved.
- */
+
 package com.farkas.annotation;
 
 import java.lang.annotation.Documented;

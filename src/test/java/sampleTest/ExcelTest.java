@@ -7,21 +7,16 @@
  */
 package sampleTest;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import com.farkas.entity.ExcelTitle;
+import com.farkas.utils.ExcelExportUtil;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.farkas.entity.ExcelTitle;
-import com.farkas.utils.ExcelExportUtil;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.*;
 
 
 /**
@@ -130,7 +125,7 @@ public class ExcelTest {
         excelTitle.setSheetName("StudentSheet");
         HSSFWorkbook workbook = ExcelExportUtil.exportExcel(excelTitle, Student.class, students);
 
-        File excelFile = new File("E:\\abc.xls");
+        File excelFile = new File("abc.xls");
         FileOutputStream fOut;
         try {
             fOut = new FileOutputStream(excelFile);

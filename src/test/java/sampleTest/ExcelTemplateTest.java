@@ -7,19 +7,14 @@
  */
 package sampleTest;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import com.farkas.utils.ExcelExportByTemplate;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.farkas.utils.ExcelExportByTemplate;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.*;
 
 /**
  * @author daniellee
@@ -85,7 +80,7 @@ public class ExcelTemplateTest {
         ExcelExportByTemplate.exportExcel(tt.wb, tt.wb.getSheetAt(0), ExcelTemplateTestEntity.class, entities,
                 entityMap);
 
-        File excelFile = new File("E:\\ExcelTemplate2.xls");
+        File excelFile = new File("ExcelTemplate2.xls");
         FileOutputStream fOut;
         try {
             fOut = new FileOutputStream(excelFile);

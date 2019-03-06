@@ -1,10 +1,4 @@
-/**
- * @version $Id$
- * Create date: Aug 18, 2014
- * Create by: daniellee
- * Copyright (c) 2013 UniqueSoft.
- * All rights reserved.
- */
+
 package com.farkas.annotation;
 
 import java.lang.annotation.Documented;
@@ -16,13 +10,7 @@ import java.lang.annotation.Target;
 /**
  * The <code>Annotation</code> represents excel column, It can be applied for class fields.
  * This annotation just can be retained in runtime.
- * 
- * @author daniellee
- * 
- * @see ExcelCollection
- * @see ExcelEntity
- * @see ExcelIgnore
- * @see ExcelTarget
+ *
  * @param exportName
  * @param exportFieldWidth
  * @param exportFieldHeight
@@ -32,30 +20,34 @@ import java.lang.annotation.Target;
  * @param exportType
  * @param databaseFormat
  * @param exportFormat
+ * @author daniellee
+ * @see ExcelCollection
+ * @see ExcelEntity
+ * @see ExcelIgnore
+ * @see ExcelTarget
  * @since JDK1.5
- * 
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 @Documented
 public @interface Excel {
 
-    public String exportName();
+    String exportName();
 
-    public int exportFieldWidth() default 10;
+    int exportFieldWidth() default 10;
 
-    public int exportFieldHeight() default 10;
+    int exportFieldHeight() default 10;
 
-    public String orderNum() default "0";
+    String orderNum() default "0";
 
-    public boolean needMerge() default false;
+    boolean needMerge() default false;
 
-    public boolean isWrap() default true;
+    boolean isWrap() default true;
 
-    public int exportType() default 1;
+    int exportType() default 1;
 
-    public String databaseFormat() default "yyyyMMddHHmmss";
+    String databaseFormat() default "yyyyMMddHHmmss";
 
-    public String exportFormat() default "";
+    String exportFormat() default "";
 
 }

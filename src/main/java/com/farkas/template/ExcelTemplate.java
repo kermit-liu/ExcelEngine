@@ -7,16 +7,15 @@
  */
 package com.farkas.template;
 
-import java.util.List;
-
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
+import java.util.List;
+
 /**
  * @author daniellee
- * 
  */
 public abstract class ExcelTemplate implements IExcelTemplate {
 
@@ -24,30 +23,30 @@ public abstract class ExcelTemplate implements IExcelTemplate {
     private HSSFSheet sheet = null;
     private HSSFRow row = null;
     private HSSFCell cell = null;
-    // Row numbers we need to create for excel template
+    /**
+     * Row numbers we need to create for excel template
+     */
     private int rowNum = 0;
 
     /**
      * set sheet title
-     * 
-     * @param title
-     *            excel title
+     *
+     * @param title excel title
      * @return CreateExcel
      */
     public abstract ExcelTemplate setTitle(String title);
 
     /**
      * set header content
-     * 
+     *
      * @return CreateExcel
      */
     public abstract ExcelTemplate setHead();
 
     /**
      * set cells data
-     * 
-     * @param datas
-     *            tempate cell data
+     *
+     * @param datas tempate cell data
      * @return CreateExcel
      */
     public abstract ExcelTemplate setCellData(List<?> datas) throws Exception;
@@ -60,8 +59,7 @@ public abstract class ExcelTemplate implements IExcelTemplate {
     }
 
     /**
-     * @param sheet
-     *            the sheet to set
+     * @param sheet the sheet to set
      */
     public void setSheet(HSSFSheet sheet) {
         this.sheet = sheet;
@@ -75,8 +73,7 @@ public abstract class ExcelTemplate implements IExcelTemplate {
     }
 
     /**
-     * @param row
-     *            the row to set
+     * @param row the row to set
      */
     public void setRow(HSSFRow row) {
         this.row = row;
@@ -90,8 +87,7 @@ public abstract class ExcelTemplate implements IExcelTemplate {
     }
 
     /**
-     * @param cell
-     *            the cell to set
+     * @param cell the cell to set
      */
     public void setCell(HSSFCell cell) {
         this.cell = cell;
@@ -105,8 +101,7 @@ public abstract class ExcelTemplate implements IExcelTemplate {
     }
 
     /**
-     * @param workbook
-     *            the workbook to set
+     * @param workbook the workbook to set
      */
     public void setWorkbook(HSSFWorkbook workbook) {
         this.workbook = workbook;

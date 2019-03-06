@@ -24,7 +24,6 @@ public class HeaderRows extends AbstractRows {
     public Cell createCell(Row row, String cellValue, int index) {
         HSSFRow hssfRow = (HSSFRow) row;
         HSSFCell cell = hssfRow.createCell(index);
-
         cell.setCellValue(cellValue);
         cell.setCellType(HSSFCell.CELL_TYPE_STRING);
         cell.setCellStyle(getStyle());

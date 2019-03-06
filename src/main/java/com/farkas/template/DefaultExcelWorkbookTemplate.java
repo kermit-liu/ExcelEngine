@@ -1,12 +1,12 @@
 package com.farkas.template;
 
-import java.util.List;
-import java.util.Map;
-
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+
+import java.util.List;
+import java.util.Map;
 
 public final class DefaultExcelWorkbookTemplate {
 
@@ -114,7 +114,6 @@ public final class DefaultExcelWorkbookTemplate {
     // return workbook.createCellStyle();
     // }
 
-    //
     public HSSFFont getFont() {
         return workbook.createFont();
     }

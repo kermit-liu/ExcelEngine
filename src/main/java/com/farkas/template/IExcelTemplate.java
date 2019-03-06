@@ -20,12 +20,12 @@ public interface IExcelTemplate {
      * @param sheetName
      *            sheet name
      */
-    public void createSheet(String sheetName);
+    void createSheet(String sheetName);
 
     /**
      * create one row
      */
-    public void createRow();
+    void createRow();
 
     /**
      * create one cell
@@ -33,7 +33,7 @@ public interface IExcelTemplate {
      * @param cellNum
      *            cell position
      */
-    public void createCell(int cellNum);
+    void createCell(int cellNum);
 
     /**
      * set content to cell
@@ -43,5 +43,5 @@ public interface IExcelTemplate {
      * @param cellNum
      *            cell position
      */
-    public void setCell(String data, int cellNum);
+    void setCell(String data, int cellNum);
 }

@@ -1,14 +1,10 @@
 package com.farkas.template;
 
+import org.apache.poi.ss.usermodel.*;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Workbook;
 
 public abstract class AbstractRows {
 
@@ -58,8 +54,9 @@ public abstract class AbstractRows {
             if (obj instanceof String) {
                 return (String) obj;
             } else if (obj instanceof Date) {
-                return null;// DateUtil.dateToString((Date)
-                            // obj,DateUtil.DATESTYLE_SHORT_EX);
+                // DateUtil.dateToString((Date)
+                // obj,DateUtil.DATESTYLE_SHORT_EX);
+                return null;
             } else {
                 return obj.toString();
             }
